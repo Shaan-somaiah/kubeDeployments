@@ -37,7 +37,7 @@ spec:
   storageClassName: manual
 
   hostPath:
-    path: /mnt/kube_vol/postgres
+    path: /mnt/kube_vol/postgres/data
 
 ---
 
@@ -80,7 +80,7 @@ spec:
     spec:
       containers:
         - name: postgres
-          image: postgres:18
+          image: postgres:17
 
           ports:
             - containerPort: 5432
